@@ -190,7 +190,7 @@ Our approach uses 7,000 samples (42,000 total outputs) and costs ~$42 on 4x A40 
 
 ## Acknowledgements
 Thanks to the Hugging Face team for their [open-r1](https://github.com/huggingface/open-r1) project.
-Quy-Anh Dang and Chris Ngo from [https://github.com/knoveleng/open-rs](https://github.com/knoveleng/open-rs). All credit for the original project, code, and documentation goes to the authors.
+Thanks to Quy-Anh Dang and Chris Ngo from [https://github.com/knoveleng/open-rs](https://github.com/knoveleng/open-rs). All credit for the original project, code, and documentation goes to the authors.
 
 ## Citation
 If this project aids your work, please cite it as:
