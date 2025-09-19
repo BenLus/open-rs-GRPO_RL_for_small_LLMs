@@ -177,3 +177,7 @@ cython_debug/
 notebooks/
 data/
 sh/
+
+#wandb
+wandb
+src/open_r1/utils/unified_wandb_plots.py

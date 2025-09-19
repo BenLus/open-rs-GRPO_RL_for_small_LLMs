@@ -1,6 +1,9 @@
 #!/bin/sh
+# Set specific GPUs to use (avoiding occupied ones)
+export CUDA_VISIBLE_DEVICES=6
+
 # Base model configuration
-MODEL="knoveleng/OpenRS-GRPO"
+MODEL="Ben-Lustig/OpenRS-GRPO_Exp3"
 BASE_MODEL_ARGS="pretrained=$MODEL,dtype=bfloat16,max_model_length=32768,gpu_memory_utilization=0.8,generation_parameters={max_new_tokens:32768,temperature:0.6,top_p:0.95}"
 
 # Define evaluation tasks
@@ -69,7 +72,7 @@ run_evaluation() {
     experiment=$1
     step=$2
     revision=$(get_revision "$experiment" "$step")
-    output_dir="logs/evals/Exp${experiment}_${step}"
+    output_dir="logs/evals/Exp${experiment}_${step}_Qwen3"
     
     # Check if revision is valid
     if [ "$revision" = "unknown" ]; then

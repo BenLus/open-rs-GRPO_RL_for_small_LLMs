@@ -148,8 +148,13 @@ def main(script_args, training_args, model_args):
     if "wandb" in training_args.report_to:
         init_wandb_training(training_args)
 
-    # Load the dataset
+    # Load the dataset (first 1000 examples only)
     dataset = load_dataset(script_args.dataset_name, name=script_args.dataset_config)
+    
+    # # Limit to first 1000 examples for each split
+    # for split_name in dataset.keys():
+    #     if len(dataset[split_name]) > 100:
+    #         dataset[split_name] = dataset[split_name].select(range(100))
 
     ################
     # Load tokenizer
